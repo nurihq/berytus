@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f
+set timeout 10
+spawn node /Users/andrew/focus/hustle/websites/.agent/scripts/ga-cli/create_ga_property.js
+expect "Account:"
+send "\r"
+expect "Enter Property Name"
+send "Berytus Webapp\r"
+expect "Enter Data Stream Name"
+send "Berytus Web Stream\r"
+expect "Enter Website URL"
+send "https://nurihq.github.io/berytus/\r"
+expect eof
