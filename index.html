@@ -11,7 +11,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Kufi+Arabic:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
@@ -21,40 +23,52 @@
 
 <body>
 
-    <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">🇺🇸</button>
+    <div class="top-controls">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+        <div class="lang-dropdown-wrapper">
+            <select id="lang-toggle" class="lang-select" aria-label="Select Language">
+                <option value="ka">🇬🇪 Georgian</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="lb">🇱🇧 Lebanese</option>
+            </select>
+        </div>
+    </div>
 
     <main class="container">
         <header class="hero"
             style="background: linear-gradient(rgba(13, 14, 21, 0.8), rgba(13, 14, 21, 0.9)), url('images/landing-bg.png') center/cover no-repeat; border-radius: 0 0 40px 40px; margin-bottom: 20px;">
             <h1 class="logo">Berytus</h1>
-            <p class="tagline" data-en="Authentic Lebanese Taste" data-ka="ავთენტური ლიბანური გემო">ავთენტური ლიბანური
-                გემო</p>
+            <p class="tagline" data-en="Authentic Lebanese Taste" data-ka="ავთენტური ლიბანური გემო"
+                data-lb="طعم لبناني أصيل">ავთენტური ლიბანური გემო</p>
             <div class="location-badge" data-en="📍 16 Ilia Chavchavadze Ave, Tbilisi"
-                data-ka="📍 ილია ჭავჭავაძის გამზ. 16, თბილისი">📍 ილია ჭავჭავაძის გამზ. 16, თბილისი</div>
+                data-ka="📍 ილია ჭავჭავაძის გამზ. 16, თბილისი" data-lb="📍 16 شارع إيليا تشافتشافادزي، تبليسي">📍 ილია
+                ჭავჭავაძის გამზ. 16, თბილისი</div>
             <p style="margin-top: 15px; color: #a0aab2; font-weight: 300;"
-                data-en="🥙 Hummus • Shawarma • Grill • Mezza" data-ka="🥙 ჰუმუსი • შაურმა • გრილი • მეზე">🥙 ჰუმუსი •
-                შაურმა • გრილი • მეზე</p>
+                data-en="🥙 Hummus • Shawarma • Grill • Mezza" data-ka="🥙 ჰუმუსი • შაურმა • გრილი • მეზე"
+                data-lb="🥙 حمص • شاورما • مشاوي • مازة">🥙 ჰუმუსი • შაურმა • გრილი • მეზე</p>
 
             <div class="links-grid">
                 <a href="https://wolt.com/en/geo/tbilisi/restaurant/berytus" target="_blank" class="cta-button wolt">
                     <span class="icon">🛵</span>
-                    <span class="text" data-en="Order on Wolt" data-ka="შეკვეთა Wolt-ზე">შეკვეთა Wolt-ზე</span>
+                    <span class="text" data-en="Order on Wolt" data-ka="შეკვეთა Wolt-ზე" data-lb="اطلب على ولت">შეკვეთა
+                        Wolt-ზე</span>
                 </a>
                 <a href="https://www.instagram.com/berytus.food/" target="_blank" class="cta-button instagram">
                     <span class="icon">📸</span>
-                    <span class="text" data-en="Instagram" data-ka="Instagram">Instagram</span>
+                    <span class="text" data-en="Instagram" data-ka="Instagram" data-lb="إنستغرام">Instagram</span>
                 </a>
                 <a href="https://www.google.com/maps/search/?api=1&query=Berytus+Restaurant+16+Ilia+Chavchavadze+Ave+Tbilisi+Georgia"
                     target="_blank" class="cta-button">
                     <span class="icon">🗺️</span>
-                    <span class="text" data-en="Google Maps" data-ka="Google Maps">Google Maps</span>
+                    <span class="text" data-en="Google Maps" data-ka="Google Maps" data-lb="خرائط جوجل">Google
+                        Maps</span>
                 </a>
             </div>
         </header>
 
         <section class="menu-section">
-            <h2 class="section-title" data-en="Chef's Recommendations" data-ka="შეფის რეკომენდაციები">შეფის
-                რეკომენდაციები</h2>
+            <h2 class="section-title" data-en="Chef's Recommendations" data-ka="შეფის რეკომენდაციები"
+                data-lb="توصيات الشيف">შეფის რეკომენდაციები</h2>
             <div class="menu-showcase">
 
                 <!-- Item 1 -->
@@ -64,11 +78,12 @@
                         <img src="images/hummus.jpeg" alt="Classic Hummus" class="card-image" loading="lazy">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title" data-en="Hummus" data-ka="ჰუმუსი">ჰუმუსი</h3>
+                        <h3 class="card-title" data-en="Hummus" data-ka="ჰუმუსი" data-lb="حمص">ჰუმუსი</h3>
                         <p class="card-desc" data-en="Chickpeas with tahini and lemon juice."
-                            data-ka="მუხუდო ტაჰინით და ლიმონის წვენით.">
-                            მუხუდო ტაჰინით და ლიმონის წვენით.</p>
-                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე">ნახეთ Wolt-ზე</span>
+                            data-ka="მუხუდო ტაჰინით და ლიმონის წვენით." data-lb="حمص مع طحينة وعصير ليمون.">მუხუდო
+                            ტაჰინით და ლიმონის წვენით.</p>
+                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე"
+                            data-lb="ابحث على ولت">ნახეთ Wolt-ზე</span>
                     </div>
                 </a>
 
@@ -79,31 +94,35 @@
                         <img src="images/shawarma.jpg" alt="Chicken Shawarma Wrap" class="card-image" loading="lazy">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title" data-en="Chicken Shawarma Wrap" data-ka="ქათმის შაურმა">ქათმის შაურმა
-                        </h3>
+                        <h3 class="card-title" data-en="Chicken Shawarma Wrap" data-ka="ქათმის შაურმა"
+                            data-lb="شاورما دجاج">ქათმის შაურმა</h3>
                         <p class="card-desc"
                             data-en="Chicken filet, Garlic sauce, Roman lettuce, Pickles and French fries all rolled in PITA BREAD."
-                            data-ka="ქათმის ფილე, ნივრის სოუსი, სალათის ფოთოლი, მწნილი და კარტოფილი ფრი, შეხვეული პიტას პურში.">
+                            data-ka="ქათმის ფილე, ნივრის სოუსი, სალათის ფოთოლი, მწნილი და კარტოფილი ფრი, შეხვეული პიტას პურში."
+                            data-lb="فيليه دجاج، صلصة ثوم، خس روماني، مخلل وبطاطا مقلية ملفوفة في خبز بيتا.">
                             ქათმის ფილე, ნივრის სოუსი, სალათის ფოთოლი, მწნილი და კარტოფილი ფრი, შეხვეული პიტას პურში.
                         </p>
-                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე">ნახეთ Wolt-ზე</span>
+                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე"
+                            data-lb="ابحث على ولت">ნახეთ Wolt-ზე</span>
                     </div>
                 </a>
 
                 <!-- Item 3 -->
                 <a href="https://wolt.com/en/geo/tbilisi/restaurant/berytus/tabouli-itemid-62ba01658ca97980776bfd79"
-                    target="_blank" class="tilt-card">
+                    target="_blank" class="tilt-card" style="display: none;">
                     <div class="card-image-wrapper">
                         <img src="images/tabouli.jpeg" alt="Tabouli" class="card-image" loading="lazy">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title" data-en="Tabouli" data-ka="ტაბულე">ტაბულე</h3>
+                        <h3 class="card-title" data-en="Tabouli" data-ka="ტაბულე" data-lb="تبولة">ტაბულე</h3>
                         <p class="card-desc"
                             data-en="Levantine salad made of finely chopped parsley, tomatoes, mint, onion seasoned with olive oil and lemon juice."
-                            data-ka="ლევანტის სალათი წვრილად დაჭრილი ოხრახუშით, პომიდვრით, პიტნით, ხახვით, ზეითუნის ზეთით და ლიმონის წვენით.">
+                            data-ka="ლევანტის სალათი წვრილად დაჭრილი ოხრახუშით, პომიდვრით, პიტნით, ხახვით, ზეითუნის ზეთით და ლიმონის წვენით."
+                            data-lb="سلطة شامية مصنوعة من بقدونس مفروم ناعماً، طماطم، نعناع، بصل متبل بزيت الزيتون وعصير الليمون.">
                             ლევანტის სალათი წვრილად დაჭრილი ოხრახუშით, პომიდვრით, პიტნით, ხახვით, ზეითუნის ზეთით და
                             ლიმონის წვენით.</p>
-                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე">ნახეთ Wolt-ზე</span>
+                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე"
+                            data-lb="ابحث على ولت">ნახეთ Wolt-ზე</span>
                     </div>
                 </a>
 
@@ -114,13 +133,16 @@
                         <img src="images/falafel.png" alt="Falafel Platter" class="card-image" loading="lazy">
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title" data-en="Falafel Platter" data-ka="ფალაფელის თეფში">ფალაფელის თეფში</h3>
+                        <h3 class="card-title" data-en="Falafel Platter" data-ka="ფალაფელის თეფში" data-lb="طبق فلافل">
+                            ფალაფელის თეფში</h3>
                         <p class="card-desc"
                             data-en="A sharing platter of our crispy, golden falafels alongside fresh vegetables and tahini."
-                            data-ka="ჩვენი ხრაშუნა, ოქროსფერი ფალაფელის გასაზიარებელი თეფში ახალ ბოსტნეულთან და ტაჰინთან ერთად.">
+                            data-ka="ჩვენი ხრაშუნა, ოქროსფერი ფალაფელის გასაზიარებელი თეფში ახალ ბოსტნეულთან და ტაჰინთან ერთად."
+                            data-lb="طبق مشاركة من فلافل مقرمشة وذهبية مع خضروات طازجة وطحينة.">
                             ჩვენი ხრაშუნა, ოქროსფერი ფალაფელის გასაზიარებელი თეფში ახალ ბოსტნეულთან და ტაჰინთან ერთად.
                         </p>
-                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე">ნახეთ Wolt-ზე</span>
+                        <span class="order-badge" data-en="Find on Wolt" data-ka="ნახეთ Wolt-ზე"
+                            data-lb="ابحث على ولت">ნახეთ Wolt-ზე</span>
                     </div>
                 </a>
 
@@ -128,8 +150,8 @@
         </section>
 
         <footer>
-            <p><span data-en="Built with 🥙 by" data-ka="შექმნილია 🥙-ით">შექმნილია 🥙-ით</span> <a
-                    href="https://nuri.software" target="_blank">Nuri</a></p>
+            <p><span data-en="Built with 🧆 by" data-ka="შექმნილია 🧆-ით" data-lb="صنع بـ 🧆 بواسطة">შექმნილია
+                    🧆-ით</span> <a href="https://nuri.software" target="_blank">Nuri</a></p>
         </footer>
     </main>
 
