@@ -121,45 +121,89 @@ body {
     align-items: center;
     padding: 0 20px;
     animation: fadeInDown 1s ease-out;
+    z-index: 1;
+    /* For stacking context */
+    overflow: hidden;
+    /* Prevent watermark spill */
+}
+
+/* Funky Lebanese Watermark Background */
+.arabic-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 18vw;
+    color: rgba(255, 255, 255, 0.15);
+    /* bright shiny overlay tone */
+    white-space: nowrap;
+    z-index: -1;
+    pointer-events: none;
+    font-weight: 800;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    user-select: none;
+}
+
+[data-theme="dark"] .arabic-watermark {
+    color: rgba(212, 175, 55, 0.15);
+    /* Gold outline for dark mode */
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
 .hero-content {
-    background: var(--glass-bg);
-    padding: 40px;
-    border-radius: 30px;
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    max-width: 1000px;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
-    font-size: 5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    background: linear-gradient(45deg, var(--primary), #ffffff);
+    font-size: 8vw;
+    /* Massive fluid typography */
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--primary) 0%, #fff6d9 50%, var(--primary) 100%);
+    background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .tagline {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-bottom: 25px;
-    font-weight: 300;
-    opacity: 0.9;
+    font-size: 2.5vw;
+    color: #fff;
+    /* Force white for maximum legibility on bright bg */
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9), 0 2px 5px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
 }
 
 .hero-desc {
-    margin-top: 20px;
-    color: var(--text-color);
-    font-weight: 400;
-    font-size: 1.1rem;
+    margin-top: 15px;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
 }
 
 .scroll-indicator {
@@ -405,11 +449,25 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .logo {
-        font-size: 3rem;
+        font-size: 4rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .hero-desc {
+        font-size: 1.1rem;
+    }
+
+    .arabic-watermark {
+        font-size: 4rem;
     }
 
     .hero {
         padding: 60px 0 40px;
+        min-height: auto;
+        /* Fallback for very small screens */
     }
 
     .cta-button {
