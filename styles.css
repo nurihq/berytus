@@ -165,45 +165,33 @@ body {
 }
 
 .logo {
-    font-size: 8vw;
-    /* Massive fluid typography */
-    font-weight: 900;
+    font-size: 15vw;
+    font-weight: 800;
     letter-spacing: 5px;
-    margin-bottom: 0px;
+    margin-bottom: -10px;
     text-transform: uppercase;
-    background: linear-gradient(135deg, var(--primary) 0%, #fff6d9 50%, var(--primary) 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
-    animation: shine 5s linear infinite;
-}
-
-@keyframes shine {
-    to {
-        background-position: 200% center;
-    }
+    color: #dfba45;
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.8);
+    line-height: 1;
 }
 
 .tagline {
-    font-size: 2.5vw;
-    color: #fff;
-    /* Force white for maximum legibility on bright bg */
-    margin-bottom: 20px;
+    font-size: 4vw;
+    color: #ffffff;
+    margin-bottom: 5px;
     font-weight: 600;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.9), 0 2px 5px rgba(0, 0, 0, 1);
-    letter-spacing: 2px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8), 0 3px 6px rgba(0, 0, 0, 1);
+    letter-spacing: 1px;
 }
 
 .hero-desc {
-    margin-top: 15px;
-    color: var(--primary);
+    margin-top: 5px;
+    color: #dfba45;
     font-weight: 800;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 1);
 }
 
 .scroll-indicator {
